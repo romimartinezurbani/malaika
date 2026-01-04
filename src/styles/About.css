@@ -1,0 +1,27 @@
+.about {
+  background-color: var(--bg-main);
+}
+
+.about-inner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 80px;
+  align-items: center;
+}
+
+.about-text p {
+  max-width: 520px;
+}
+
+.image-placeholder {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  border: 1px solid var(--border-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-soft);
+}

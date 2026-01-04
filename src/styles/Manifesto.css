@@ -1,0 +1,15 @@
+.manifesto {
+  background-color: var(--bg-white);
+}
+
+.manifesto-quote {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  font-style: italic;
+  margin: 64px 0;
+  max-width: 520px;
+}
+
+.manifesto-cta {
+  margin-top: 40px;
+}

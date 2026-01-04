@@ -1,0 +1,21 @@
+.btn {
+  font-size: 0.85rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.btn.primary {
+  border-bottom: 1px solid var(--text-main);
+}
+
+.btn.primary:hover {
+  opacity: 0.6;
+}
+
+.btn.secondary {
+  color: var(--text-soft);
+}

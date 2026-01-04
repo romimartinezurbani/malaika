@@ -1,0 +1,22 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.hero h1 {
+  font-size: 3.4rem;
+  line-height: 1.2;
+  margin-bottom: 32px;
+}
+
+.hero p {
+  max-width: 620px;
+  margin-bottom: 48px;
+}

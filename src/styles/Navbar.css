@@ -1,0 +1,36 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--bg-main);
+  z-index: 100;
+}
+
+.navbar-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+}
+
+.nav-links a {
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.nav-links a:hover {
+  opacity: 0.6;
+}

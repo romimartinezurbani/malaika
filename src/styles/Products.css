@@ -1,0 +1,23 @@
+.products {
+  background-color: var(--bg-main);
+}
+
+.products-list {
+  margin: 80px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 48px;
+}
+
+.product-item {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  border-top: 1px solid var(--border-soft);
+  padding-top: 24px;
+}
+
+.products-cta {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
