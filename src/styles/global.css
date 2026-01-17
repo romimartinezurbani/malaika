@@ -1,26 +1,114 @@
+/* ==============================
+   IMPORTS TIPOGRAFÍAS
+============================== */
+
+/* Raleway */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600&display=swap");
+
+/* Si Rudge y Script las tenés locales */
+@font-face {
+  font-family: "Rudge";
+  src: url("../assets/fonts/Rudge.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ==============================
+   VARIABLES DE MARCA
+============================== */
+
+:root {
+  /* Colores */
+  --color-cream: #f2ded4;
+  --color-green: #38502b;
+  --color-earth: #a8805d;
+  --color-sage: #848262;
+
+  --bg-main: var(--color-cream);
+  --bg-white: #ffffff;
+  --bg-soft: var(--color-sage);
+
+  --text-main: var(--color-green);
+  --text-soft: rgba(56, 80, 43, 0.7);
+
+  /* Tipografías */
+  --font-title: "Rudge", serif;
+  --font-body: "Raleway", sans-serif;
+}
+
+/* ==============================
+   RESET BASE
+============================== */
+
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  background-color: var(--bg-main);
+  font-family: var(--font-body);
   color: var(--text-main);
-  line-height: 1.8;
+  background-color: var(--bg-white);
+  line-height: 1.6;
 }
 
-h1, h2, h3 {
-  font-family: 'Playfair Display', serif;
-  font-weight: 400;
+/* ==============================
+   TIPOGRAFÍA GLOBAL
+============================== */
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-title);
+  font-weight: normal;
+  color: var(--text-main);
+}
+
+h1 {
+  font-size: clamp(2.6rem, 5vw, 4rem);
+  line-height: 1.15;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+h3 {
+  font-size: 1.6rem;
 }
 
 p {
-  color: var(--text-soft);
   font-size: 1rem;
+  color: var(--text-main);
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
+.section {
+  padding: 7rem 2rem;
 }
+
+.section-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ==============================
+   FRASES / QUOTES
+============================== */
+
+.quote,
+.about-quote {
+  font-style: italic;
+  color: var(--color-earth);
+  margin: 2rem 0;
+}
+
+/* ==============================
+   BOTONES
+============================== */
+
+button,
+.button {
+  font-family: var(--font-body);
+}
+

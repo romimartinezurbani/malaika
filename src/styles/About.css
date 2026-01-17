@@ -1,27 +1,152 @@
-.about {
-  background-color: var(--bg-main);
+/* HERO */
+.about-hero {
+  min-height: 65vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.about-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(245, 244, 242, 0.75);
+}
+
+.about-hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 2.5rem;
+}
+
+.about-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.about-hero p {
+  font-size: 1.1rem;
+  color: var(--text-soft);
+}
+
+/* CONTENIDO PRINCIPAL */
+.about-content {
+  padding: 4rem 0;
 }
 
 .about-inner {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 80px;
-  align-items: center;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 5rem;
+  align-items: flex-start;
 }
 
-.about-text p {
-  max-width: 520px;
+.about-text h3 {
+  margin: 3rem 0 1.5rem;
 }
 
-.image-placeholder {
-  width: 100%;
-  aspect-ratio: 3 / 4;
-  border: 1px solid var(--border-soft);
+.about-quote {
+  font-style: italic;
+  color: white;
+  margin: 2rem 0;
+}
+
+/* ==============================
+   IMÁGENES ABOUT – LIMPIAS
+============================== */
+
+.about-image {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.85rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: var(--text-soft);
+  justify-content: flex-end;
 }
+
+.about-image-wrapper {
+  max-width: 280px; /* 👈 tamaño prolijo */
+}
+
+.about-image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: transparent;
+}
+
+
+/* IKIGAI */
+.about-ikigai {
+  background: var(--bg-white);
+  padding: 4rem 0;
+}
+
+.ikigai-inner {
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.ikigai-image {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.ikigai-image img {
+  width: 100%;
+  max-width: 260px; 
+  height: auto;
+  border-radius: 16px;
+}
+
+
+/* PROFESIONAL */
+.about-professional-inner {
+  display: grid;
+  grid-template-columns: 0.6fr 1fr;
+  gap: 4rem;
+  align-items: center; /* ahora sí funciona bien */
+}
+
+.about-image {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+
+/* CIERRE */
+.about-close {
+  background: var(--bg-soft);
+  padding: 4rem 0; 
+  text-align: center;
+  
+}
+
+
+.about-close-inner {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .about-inner,
+  .ikigai-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .about-image {
+    position: relative;
+    top: 0;
+    margin-top: 3rem;
+  }
+
+  .about-hero h1 {
+    font-size: 2.2rem;
+  }
+}
+
+

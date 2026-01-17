@@ -1,21 +1,27 @@
-.btn {
-  font-size: 0.85rem;
-  letter-spacing: 1.5px;
+/* ==============================
+   BOTÓN PRINCIPAL – MALAÍKA
+============================== */
+
+.btn-primary {
+  display: inline-block;
+  padding: 1rem 2.4rem;
+  border-radius: 40px;
+  border: 1px solid transparent;
+
+  background-color: #a8805d;
+  color: #fff;
+
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
+
+  transition: all 0.3s ease;
 }
 
-.btn.primary {
-  border-bottom: 1px solid var(--text-main);
+.btn-primary:hover {
+  background-color: transparent;
+  color: #a8805d;
+  border-color: #a8805d;
 }
 
-.btn.primary:hover {
-  opacity: 0.6;
-}
 
-.btn.secondary {
-  color: var(--text-soft);
-}

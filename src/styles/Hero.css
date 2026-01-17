@@ -1,22 +1,134 @@
+/* ==============================
+   HERO
+============================== */
+
 .hero {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
+  position: relative;
+  min-height: calc(100vh - 80px); /* 👈 evita que lo pise el navbar */
+  margin-top: 80px;              /* 👈 baja el hero */
+  background-color: #f5f4f2;
+  overflow: hidden;
 }
+
+/* ==============================
+   CAPAS DE IMAGEN
+============================== */
+
+.hero-media {
+  position: absolute;
+  inset: 0;
+  background-color: #f5f4f2;
+}
+
+.hero-media-layer {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+}
+
+.hero-media-layer.prev {
+  opacity: 1;
+}
+
+.hero-media-layer.current {
+  opacity: 1;
+}
+
+/* Fade suave */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ==============================
+   OVERLAY
+============================== */
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(244, 241, 237, 0.45),
+    rgba(244, 241, 237, 0.65)
+  );
+  z-index: 2;
+}
+
+/* ==============================
+   CONTENIDO
+============================== */
 
 .hero-content {
-  max-width: 780px;
+  position: relative;
+  z-index: 3;
+  max-width: 720px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 6rem 2rem 4rem; /* 👈 baja el texto */
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
 
-.hero h1 {
-  font-size: 3.4rem;
+
+/* ==============================
+   TEXTO
+============================== */
+
+.hero-content h1 {
+  font-size: clamp(2.4rem, 4vw, 3.4rem);
   line-height: 1.2;
-  margin-bottom: 32px;
+  margin-bottom: 1.5rem;
 }
 
-.hero p {
-  max-width: 620px;
-  margin-bottom: 48px;
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
 }
+
+.hero-description {
+  font-size: 1rem;
+  margin-bottom: 2.5rem;
+  opacity: 0.9;
+}
+
+/* ==============================
+   BOTÓN
+============================== */
+
+.hero .btn.primary {
+  font-size: 1rem;
+  letter-spacing: 2px;
+  margin-top: 1rem;
+  border-bottom: 1px solid var(--text-main);
+  padding-bottom: 0.4rem;
+}
+
+/* ==============================
+   RESPONSIVE
+============================== */
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: calc(90vh - 70px);
+    margin-top: 70px;
+  }
+
+  .hero-content {
+    padding: 0 1.5rem;
+  }
+}
+
+
+
+

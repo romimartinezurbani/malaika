@@ -1,23 +1,150 @@
-.products {
-  background-color: var(--bg-main);
-}
+/* ==============================
+   INTRO
+============================== */
 
-.products-list {
-  margin: 80px 0;
+.productos-intro-inner {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 48px;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 3.5rem;
+  align-items: center;
 }
 
-.product-item {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.4rem;
-  border-top: 1px solid var(--border-soft);
-  padding-top: 24px;
+.productos-intro-image {
+  max-width: 420px; /* 👈 reduce tamaño */
+  margin: 0 auto;
+  animation: floatSoft 8s ease-in-out infinite;
 }
 
-.products-cta {
-  display: flex;
-  gap: 32px;
-  flex-wrap: wrap;
+.productos-intro-image img {
+  width: 100%;
+  border-radius: 26px;
 }
+
+.productos-intro-text p {
+  line-height: 1.7;
+  margin-bottom: 1.3rem;
+}
+
+/* ==============================
+   BLOQUES PRODUCTO
+============================== */
+
+.producto-block {
+  padding: 4.5rem 0; /* 👈 menos aire vertical */
+}
+
+.producto-inner {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+/* alternado */
+.producto-block.alt .producto-inner {
+  direction: rtl;
+}
+
+.producto-block.alt .producto-text {
+  direction: ltr;
+}
+
+/* ==============================
+   IMÁGENES DE PRODUCTO
+============================== */
+
+.producto-image {
+  max-width: 380px; /* 👈 mucho más fino */
+  margin: 0 auto;
+  animation: floatSoft 7s ease-in-out infinite;
+}
+
+.producto-image img {
+  width: 100%;
+  border-radius: 28px;
+}
+
+/* ==============================
+   TEXTO PRODUCTO
+============================== */
+
+.producto-text h3 {
+  margin-bottom: 1.1rem;
+}
+
+.producto-text p {
+  line-height: 1.7;
+  margin-bottom: 1.2rem;
+}
+
+/* ==============================
+   CTA
+============================== */
+
+.productos-cta {
+  background-color: #f6f4ef;
+  text-align: center;
+}
+
+.productos-cta-inner {
+  padding: 4rem 0;
+}
+
+/* botón unificado marca */
+.productos-cta .btn-primary {
+  display: inline-block;
+  padding: 1rem 2.4rem;
+  border-radius: 40px;
+  border: 1px solid transparent;
+  background-color: #a8805d;
+  color: #fff;
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.productos-cta .btn-primary:hover {
+  background-color: transparent;
+  color: #a8805d;
+  border-color: #a8805d;
+}
+
+/* ==============================
+   ANIMACIÓN SUTIL
+============================== */
+
+@keyframes floatSoft {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* ==============================
+   RESPONSIVE
+============================== */
+
+@media (max-width: 900px) {
+  .productos-intro-inner,
+  .producto-inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .producto-block.alt .producto-inner {
+    direction: ltr;
+  }
+
+  .producto-image,
+  .productos-intro-image {
+    max-width: 320px;
+  }
+}
+
+

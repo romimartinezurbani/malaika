@@ -1,125 +1,142 @@
+import { useState } from "react";
 import "../styles/Section.css";
 import "../styles/Experiences.css";
 import Button from "./Button";
+import ExperienceModal from "./ExperienceModal";
+import montana1 from "../assets/experiences/montaña/1.png";
+import montana2 from "../assets/experiences/montaña/2.png";
+import montana3 from "../assets/experiences/montaña/3.png";
+import montana4 from "../assets/experiences/montaña/4.png";
+import montana5 from "../assets/experiences/montaña/5.png";
+import montana6 from "../assets/experiences/montaña/6.png";
+import montana7 from "../assets/experiences/montaña/7.png";
+import montana8 from "../assets/experiences/montaña/8.png";
+
+import aroma1 from "../assets/experiences/merienda/1.png";
+import aroma2 from "../assets/experiences/merienda/2.png";
+import aroma3 from "../assets/experiences/merienda/3.png";
+import aroma4 from "../assets/experiences/merienda/4.png";
+import aroma5 from "../assets/experiences/merienda/5.png";
+import aroma6 from "../assets/experiences/merienda/6.png";
+import aroma7 from "../assets/experiences/merienda/7.png";
+import aroma8 from "../assets/experiences/merienda/8.png";
+import heroImage from "../assets/imagenes/experiencias.png";
+import SectionHero from "./SectionHero";
+
+const montanaImages = [
+  montana1,
+  montana2,
+  montana3,
+  montana4,
+  montana5,
+  montana6,
+  montana7,
+  montana8,
+  
+];
+
+const aromaImages = [
+  aroma1,
+  aroma2,
+  aroma3,
+  aroma4,
+  aroma5,
+  aroma6,
+  aroma7,
+  aroma8,
+];
+
 
 export default function Experiences() {
+  const [openModal, setOpenModal] = useState(null);
+
   return (
-    <section className="section experiences" id="experiencias">
-      <div className="section-inner">
+    <section className="experiences" id="experiencias">
 
-        <h2 className="section-title">
-          Experiencias para sentir, crear y reconectar.
-        </h2>
+  {/* PORTADA */}
+    <SectionHero
+    title="Experiencias para sentir, crear y reconectar."
+    background={heroImage}
+  />
 
-        <div className="section-text">
-          <p>
-            Las experiencias sensoriales de Malaika son encuentros diseñados para
-            salir del automático, conectar con los sentidos y crear desde la
-            presencia.
-          </p>
+  {/* CONTENIDO */}
+  <div className="section experiences-content">
+    <div className="section-inner">
 
-          <p>
-            Combinamos aromas, rituales, creatividad y naturaleza para abrir
-            espacios de introspección y disfrute consciente.
-          </p>
-        </div>
+      <div className="section-text">
+        <p>
+          Las experiencias sensoriales de Malaika son encuentros diseñados para
+          salir del automático, conectar con los sentidos y crear desde la
+          presencia.
+        </p>
 
-        {/* Experiencia 1 */}
-        <div className="experience-block">
-
-          <h3 className="experience-title">
-            Velas entre Aromas
-          </h3>
-
-          <span className="experience-subtitle">
-            Ediciones especiales · Cena o Merienda
-          </span>
-
-          <p className="experience-description">
-            Una experiencia íntima y sensorial donde cada participante crea su
-            propia vela artesanal, elige aromas, decora su envase y atraviesa un
-            ritual de intención y presencia.
-          </p>
-
-          <div className="experience-columns">
-
-            <div>
-              <h4>Incluye</h4>
-              <ul>
-                <li>🕯️ Creación de vela artesanal</li>
-                <li>🌸 Elección consciente de aromas</li>
-                <li>✍️ Momento de intención y reflexión</li>
-                <li>🍷 Edición cena / ☕ edición merienda</li>
-                <li>🤍 Acompañamiento durante toda la experiencia</li>
-              </ul>
-            </div>
-
-            <div>
-              <h4>Ideal para</h4>
-              <ul>
-                <li>Encuentros entre amigas</li>
-                <li>Celebraciones íntimas</li>
-                <li>Despedidas o aperturas de ciclo</li>
-                <li>Espacios de autocuidado y disfrute</li>
-              </ul>
-            </div>
-
-          </div>
-
-          <div className="experience-cta">
-            <Button variant="primary">
-              Ver próximas fechas
-            </Button>
-            <Button variant="secondary">
-              Consultar experiencia
-            </Button>
-          </div>
-
-        </div>
-
-        {/* Experiencia 2 */}
-        <div className="experience-block experience-alt">
-
-          <h3 className="experience-title">
-            Velas entre Montañas
-          </h3>
-
-          <p className="experience-description">
-            Una experiencia sensorial inmersiva en la naturaleza, donde el
-            paisaje serrano se convierte en parte del ritual. Creamos velas,
-            conectamos con los sentidos y abrimos un espacio profundo de
-            presencia, introspección y calma.
-          </p>
-
-          <p className="experience-focus">
-            Naturaleza · Silencio · Ritmo lento · Ritual · Conexión interna
-          </p>
-
-          <div className="experience-columns">
-
-            <div>
-              <h4>Ideal para</h4>
-              <ul>
-                <li>Personas que buscan una experiencia transformadora</li>
-                <li>Escapadas conscientes</li>
-                <li>Momentos de reconexión profunda</li>
-              </ul>
-            </div>
-
-          </div>
-
-          <div className="experience-cta">
-            <Button variant="primary">
-              Descubrir Velas entre Montañas
-            </Button>
-            <Button variant="secondary">
-              Consultar próximas ediciones
-            </Button>
-          </div>
-
-        </div>
-
+        <p>
+          Combinamos aromas, rituales, creatividad y naturaleza para abrir
+          espacios de introspección y disfrute consciente.
+        </p>
       </div>
-    </section>
+      </div>
+
+    <div className="experiences-grid">
+
+      {/* Experiencia 1 */}
+      <div className="experience-card">
+        <h3 className="experience-title">Velas entre Aromas</h3>
+
+        <span className="experience-subtitle">
+          Ediciones especiales · Cena o Merienda
+        </span>
+
+        <p className="experience-description">
+          Una experiencia íntima y sensorial donde cada participante crea su
+          propia vela artesanal.
+        </p>
+
+        <Button
+          variant="btn-primary"
+          onClick={() => setOpenModal("aromas")}
+        >
+          Ver experiencia
+        </Button>
+      </div>
+
+      {/* Experiencia 2 */}
+      <div className="experience-card alt">
+        <h3 className="experience-title">Velas entre Montañas</h3>
+
+        <p className="experience-description">
+          Una experiencia sensorial inmersiva en la naturaleza, donde el
+          paisaje serrano se convierte en parte del ritual.
+        </p>
+
+        <Button
+          variant="btn-primary"
+          onClick={() => setOpenModal("montanas")}
+        >
+          Ver experiencia
+        </Button>
+      </div>
+
+    </div>
+  </div>
+
+  {/* Modales */}
+  <ExperienceModal
+    open={openModal === "aromas"}
+    onClose={() => setOpenModal(null)}
+    title=" "
+    images={aromaImages}
+  />
+
+  <ExperienceModal
+    open={openModal === "montanas"}
+    onClose={() => setOpenModal(null)}
+    title=" "
+    images={montanaImages}
+  />
+</section>
+
   );
 }
+
+

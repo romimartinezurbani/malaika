@@ -1,38 +1,49 @@
 import "../styles/Section.css";
 import "../styles/Manifesto.css";
 import Button from "./Button";
+import velas from "../assets/imagenes/esencia.jpg";
 
 export default function Manifesto() {
   return (
-    <section className="section manifesto">
-      <div className="section-inner">
+    <section className="section manifesto" id="manifiesto">
+      <div className="section-inner manifesto-inner">
 
-        <h2 className="section-title">
-          Un espacio para reconectar.
-        </h2>
+        <div className="manifesto-text">
 
-        <div className="section-text">
-          <p>
-            En un mundo que corre, Malaika propone pausar.
-            Crear momentos de presencia donde lo cotidiano se transforma
-            en ritual, el aroma en emoción y la experiencia en un puente hacia vos.
+          <h2 className="section-title">
+            Volvé a vos para reconectar.
+          </h2>
+
+          <p>Vivimos en un mundo que corre.</p>
+          <p>Que pide hacer, producir, responder.</p>
+          <p className="highlight">
+            Malaika nace como una pausa.
           </p>
 
           <p>
-            Cada producto, cada encuentro y cada acompañamiento está pensado
-            como un espacio de introspección suave, belleza consciente
-            y cuidado emocional.
+            Creemos que lo cotidiano también puede ser ritual.
+            Que un aroma puede abrir una emoción.
           </p>
-        </div>
 
-        <blockquote className="manifesto-quote">
-          “Cada aroma te acerca un poco más a vos.”
-        </blockquote>
+          <p>
+            Cada encuentro, cada vela y cada ritual
+            es una invitación suave a mirar hacia adentro,
+            cerrar ciclos, abrir preguntas
+            y reconectar con lo esencial.
+          </p>
 
-        <div className="manifesto-cta">
-          <Button variant="primary">
+          <blockquote>
+            “Cada aroma te acerca un poco más a vos.”
+          </blockquote>
+
+          <Button variant="btn-primary" href="#experiencias">
             Conocé la esencia de Malaika
           </Button>
+
+        </div>
+
+        <div className="manifesto-image">
+          <img src={velas} alt="Ritual de velas Malaika" />
         </div>
 
       </div>

@@ -1,38 +1,76 @@
 .final-cta {
-  background-color: var(--bg-dark);
-  color: var(--text-light);
+  background-color: rgba(184, 164, 124, 0.22); /* accent suave */
+  padding: 7rem 0;
   text-align: center;
 }
 
 .final-cta-inner {
-  max-width: 640px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
+/* Título */
 .final-cta-title {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(2rem, 4vw, 2.8rem);
-  margin-bottom: 32px;
+  font-size: clamp(2.2rem, 3.8vw, 2.8rem);
+  font-weight: 400;
+  color: var(--text-main);
+  margin-bottom: 1.6rem;
 }
 
+/* Texto */
 .final-cta-text {
-  font-size: 1.05rem;
-  margin-bottom: 64px;
-  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--text-soft);
+  max-width: 640px;
+  margin: 0 auto 3.5rem;
 }
 
+/* Botón WhatsApp */
 .final-cta-button {
-  display: inline-block;
-  padding: 16px 40px;
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  color: #fff;
-  text-decoration: none;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  font-size: 0.8rem;
-  transition: all 0.3s ease;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 78px;
+  height: 78px;
+
+  border-radius: 50%;
+  border: 1px solid var(--text-main);
+  color: var(--text-main);
+  background: transparent;
+
+  transition: all 0.35s ease;
+}
+
+.final-cta-button svg {
+  width: 34px;
+  height: 34px;
 }
 
 .final-cta-button:hover {
-  background-color: #fff;
-  color: #000;
+  background-color: var(--text-main);
+  color: #fff;
+  transform: translateY(-4px);
 }
+
+
+.final-cta-button:hover svg {
+  stroke: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .final-cta {
+    padding: 5rem 0;
+  }
+
+  .final-cta-text {
+    margin-bottom: 3rem;
+  }
+}
+
+
+

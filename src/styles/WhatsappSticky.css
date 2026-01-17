@@ -1,0 +1,31 @@
+.whatsapp-sticky {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+
+  width: 64px;
+  height: 64px;
+
+  border-radius: 50%;
+  background-color: var(--accent);
+  color: #38502b;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+  z-index: 999;
+
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.whatsapp-sticky svg {
+  width: 30px;
+  height: 30px;
+}
+
+.whatsapp-sticky:hover {
+  transform: translateY(-4px);
+  background-color: var(--text-main);
+}

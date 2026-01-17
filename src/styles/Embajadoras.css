@@ -1,0 +1,98 @@
+/* INTRO */
+.embajadoras-intro-section {
+  padding: 4rem 0;
+}
+
+.embajadoras-intro-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.embajadoras-image {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.embajadoras-image img {
+  max-width: 420px;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* CONTENIDO */
+.embajadoras-content {
+  padding: 4rem 0;
+}
+
+.embajadoras-content-inner {
+  max-width: 760px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+.embajadoras-block h3 {
+  margin-bottom: 1.2rem;
+  color: var(--accent);
+}
+
+.embajadoras-block p {
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.embajadoras-block ul {
+  padding-left: 1.2rem;
+}
+
+.embajadoras-block li {
+  margin-bottom: 0.6rem;
+  line-height: 1.6;
+}
+
+.embajadoras-subtitle {
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+}
+
+/* CTA */
+.embajadoras-cta {
+  background-color: #f6f4ef;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.embajadoras-cta-inner {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.embajadoras-cta-inner p {
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+.embajadoras-cta-button {
+  display: inline-block;
+  padding: 1rem 2.4rem;
+  border-radius: 40px;
+  background-color: #a8805d;
+  color: #fff;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.embajadoras-cta-button:hover {
+  background-color: transparent;
+  color: #a8805d;
+  border: 1px solid #a8805d;
+}

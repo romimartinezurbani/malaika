@@ -15,14 +15,7 @@ export default function FinalCTA() {
             Malaika es una invitación a habitarte con intención.
         </p>
 
-        <a
-          href="https://wa.me/549XXXXXXXXXX"
-          target="_blank"
-          rel="noreferrer"
-          className="final-cta-button"
-        >
-          Iniciar conversación
-        </a>
+
 
       </div>
     </section>
