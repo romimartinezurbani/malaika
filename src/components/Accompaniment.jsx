@@ -14,8 +14,13 @@ import a3 from "../assets/acompañamiento/3.png";
 import a4 from "../assets/acompañamiento/4.png";
 import a5 from "../assets/acompañamiento/5.png";
 import a6 from "../assets/acompañamiento/6.png";
+import a7 from "../assets/acompañamiento/7.png";
+import a8 from "../assets/acompañamiento/8.png";
+import a9 from "../assets/acompañamiento/9.png";
+import a10 from "../assets/acompañamiento/10.png";
 
-const acompanamientoImages = [a1, a2, a3, a4, a5, a6];
+
+const acompanamientoImages = [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10];
 
 export default function Acompanamientos() {
   const [openModal, setOpenModal] = useState(false);
@@ -112,14 +117,10 @@ export default function Acompanamientos() {
               </ul>
             </div>
 
-            <Button
-              variant="btn-primary"
-              href="https://wa.me/5493584856527?text=Hola!%20Quisiera%20consultar%20sobre%20el%20programa%20grupal%20Habitarte."
-            >
-              Consultar inicio del programa
+            <Button variant="btn-primary" onClick={() => setOpenModal(true)}>
+              Conocer el programa Habitarte
             </Button>
-          </div>
-
+            </div>
         </div>
       </section>
 

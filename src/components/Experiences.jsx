@@ -104,6 +104,10 @@ export default function Experiences() {
       <div className="experience-card alt">
         <h3 className="experience-title">Velas entre Montañas</h3>
 
+        <p className="experience-subtitle">
+          Ediciones especiales · Experiencia en la naturaleza
+        </p>
+
         <p className="experience-description">
           Una experiencia sensorial inmersiva en la naturaleza, donde el
           paisaje serrano se convierte en parte del ritual.
