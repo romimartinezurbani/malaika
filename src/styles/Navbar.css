@@ -1,7 +1,16 @@
+:root {
+  --navbar-height: 96px;
+}
+
+/* ==============================
+   NAVBAR
+============================== */
+
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
+  height: var(--navbar-height);
   z-index: 100;
   background: rgba(245, 244, 242, 0.85);
   backdrop-filter: blur(6px);
@@ -11,17 +20,30 @@
 .navbar-inner {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 10px 24px;
+  padding: 0 24px;
+  height: 100%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  position: relative;
+  justify-content: space-between;
 }
 
+/* ==============================
+   LOGO
+============================== */
 
+.logo {
+  display: flex;
+  align-items: center;
+}
 
+.logo img {
+  height: 72px;
+}
 
-/* Links */
+/* ==============================
+   LINKS DESKTOP
+============================== */
+
 .nav-links {
   display: flex;
   gap: 32px;
@@ -36,7 +58,6 @@
   transition: color 0.3s ease;
 }
 
-/* Subrayado sutil */
 .nav-links a::after {
   content: "";
   position: absolute;
@@ -58,39 +79,43 @@
   transform: scaleX(1);
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-  line-height: 1;
+/* ==============================
+   INSTAGRAM
+============================== */
+
+.nav-instagram {
+  font-size: 1rem;
+  color: var(--text-soft);
+  margin-left: 24px;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.logo img {
-  height: 100px;
-  margin-top: -10px;
-  margin-bottom: -10px;
+.nav-instagram:hover {
+  color: var(--text-main);
+  transform: translateY(-1px);
 }
 
-/* HAMBURGUESA */
+/* ==============================
+   BURGER
+============================== */
+
 .burger {
   display: none;
   background: none;
   border: none;
   cursor: pointer;
   padding: 10px;
-  z-index: 200; /* 👈 CLAVE */
 }
 
 .burger span {
   display: block;
   width: 24px;
   height: 2px;
-  background-color: var(--text-main); /* aseguramos contraste */
+  background-color: var(--text-main);
   margin: 5px 0;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-
-/* Animación cruz */
 .burger.open span:nth-child(1) {
   transform: translateY(6px) rotate(45deg);
 }
@@ -103,15 +128,16 @@
   transform: translateY(-6px) rotate(-45deg);
 }
 
-/* MOBILE MENU */
+/* ==============================
+   MOBILE MENU
+============================== */
+
 .mobile-menu {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 28px;
-
   padding: 3rem 1.5rem;
-
   background: rgba(245, 244, 242, 0.96);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--border-soft);
@@ -124,9 +150,24 @@
   color: var(--text-main);
 }
 
-/* RESPONSIVE */
+.nav-instagram.mobile {
+  font-size: 1.2rem;
+}
+
+/* ==============================
+   RESPONSIVE
+============================== */
+
 @media (max-width: 900px) {
+  :root {
+    --navbar-height: 72px;
+  }
+
   .nav-links {
+    display: none;
+  }
+
+  .nav-instagram {
     display: none;
   }
 
@@ -135,7 +176,6 @@
   }
 
   .logo img {
-    height: 68px;
-    margin: 0;
+    height: 56px;
   }
 }

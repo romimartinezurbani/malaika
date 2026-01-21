@@ -1,3 +1,5 @@
+import "../styles/SectionHero.css";
+
 export default function SectionHero({ title, background }) {
   return (
     <section

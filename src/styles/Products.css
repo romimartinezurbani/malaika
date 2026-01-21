@@ -1,42 +1,69 @@
 /* ==============================
-   INTRO
+   INTRO · AROMAS (DOBLE IMAGEN)
 ============================== */
 
 .productos-intro-inner {
   display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: 3.5rem;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 4.5rem; /* ⬅️ un poco más de aire */
   align-items: center;
 }
 
+/* CONTENEDOR RELATIVO */
 .productos-intro-image {
-  max-width: 420px; /* 👈 reduce tamaño */
-  margin: 0 auto;
-  animation: floatSoft 8s ease-in-out infinite;
-}
-
-.productos-intro-image img {
+  position: relative;
   width: 100%;
-  border-radius: 26px;
+  max-width: 720px;   /* ⬅️ MÁS GRANDE → mejora lectura del texto */
+  margin: 0 auto;
+  height: 560px;
 }
 
-.productos-intro-text p {
-  line-height: 1.7;
-  margin-bottom: 1.3rem;
+/* IMAGEN BASE (la que tiene texto importante) */
+.productos-intro-image img:first-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 92%;         /* ⬅️ gana protagonismo */
+  height: auto;
+  border-radius: 28px;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.14);
+  z-index: 2;         /* ⬅️ ahora es la principal */
 }
+
+/* IMAGEN SUPERPUESTA (acompaña) */
+.productos-intro-image img:last-child {
+  position: absolute;
+  bottom: -4%;
+  right: -4%;
+  width: 78%;
+  height: auto;
+  border-radius: 28px;
+  box-shadow: 0 26px 60px rgba(0, 0, 0, 0.18);
+  z-index: 1;
+
+  animation: floatSoft 9s ease-in-out infinite;
+}
+
+/* TEXTO */
+.productos-intro-text p {
+  line-height: 1.75;
+  margin-bottom: 1.4rem;
+  max-width: 520px;
+}
+
 
 /* ==============================
    BLOQUES PRODUCTO
 ============================== */
 
 .producto-block {
-  padding: 4.5rem 0; /* 👈 menos aire vertical */
+  padding: 5rem 0; /* ⬅️ un poco más de presencia */
 }
 
 .producto-inner {
   display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: 4rem;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 4.5rem;
   align-items: center;
 }
 
@@ -49,12 +76,13 @@
   direction: ltr;
 }
 
+
 /* ==============================
    IMÁGENES DE PRODUCTO
 ============================== */
 
 .producto-image {
-  max-width: 380px; /* 👈 mucho más fino */
+  max-width: 460px; /* ⬅️ más grandes, más lectura */
   margin: 0 auto;
   animation: floatSoft 7s ease-in-out infinite;
 }
@@ -62,20 +90,23 @@
 .producto-image img {
   width: 100%;
   border-radius: 28px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
 }
+
 
 /* ==============================
    TEXTO PRODUCTO
 ============================== */
 
 .producto-text h3 {
-  margin-bottom: 1.1rem;
+  margin-bottom: 1.2rem;
 }
 
 .producto-text p {
   line-height: 1.7;
   margin-bottom: 1.2rem;
 }
+
 
 /* ==============================
    CTA
@@ -87,13 +118,12 @@
 }
 
 .productos-cta-inner {
-  padding: 4rem 0;
+  padding: 4.5rem 0;
 }
 
-/* botón unificado marca */
 .productos-cta .btn-primary {
   display: inline-block;
-  padding: 1rem 2.4rem;
+  padding: 1rem 2.6rem;
   border-radius: 40px;
   border: 1px solid transparent;
   background-color: #a8805d;
@@ -109,6 +139,7 @@
   color: #a8805d;
   border-color: #a8805d;
 }
+
 
 /* ==============================
    ANIMACIÓN SUTIL
@@ -126,24 +157,39 @@
   }
 }
 
+
 /* ==============================
    RESPONSIVE
 ============================== */
 
 @media (max-width: 900px) {
-  .productos-intro-inner,
+  .productos-intro-inner {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+
+  .productos-intro-image {
+    height: auto;
+    max-width: 100%;
+  }
+
+  .productos-intro-image img:first-child,
+  .productos-intro-image img:last-child {
+    width: 100%;
+    position: relative;
+  }
+
+  .productos-intro-image img:last-child {
+    margin-top: -60px; /* ⬅️ cruce visible pero limpio */
+  }
+
   .producto-inner {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
 
-  .producto-block.alt .producto-inner {
-    direction: ltr;
-  }
-
-  .producto-image,
-  .productos-intro-image {
-    max-width: 320px;
+  .producto-image {
+    max-width: 340px;
   }
 }
 

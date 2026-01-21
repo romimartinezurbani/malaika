@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { FaInstagram } from "react-icons/fa";
 import "../styles/Navbar.css";
 import logo from "../assets/logo/Logo.png";
 
@@ -9,7 +10,7 @@ export default function Navbar() {
   return (
     <header className="navbar">
       <div className="navbar-inner">
-
+        {/* Logo */}
         <Link to="/" className="logo" onClick={() => setOpen(false)}>
           <img src={logo} alt="Malaika" />
         </Link>
@@ -24,6 +25,17 @@ export default function Navbar() {
           <Link to="/embajadoras">Embajadoras</Link>
           <Link to="/sobre-mi">Sobre mí</Link>
         </nav>
+
+        {/* Instagram desktop */}
+        <a
+          href="https://www.instagram.com/aromasdemalaika/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="nav-instagram"
+          aria-label="Instagram Malaika"
+        >
+          <FaInstagram />
+        </a>
 
         {/* Hamburguesa */}
         <button
@@ -47,6 +59,16 @@ export default function Navbar() {
           <Link to="/testimonios" onClick={() => setOpen(false)}>Testimonios</Link>
           <Link to="/embajadoras" onClick={() => setOpen(false)}>Embajadoras</Link>
           <Link to="/sobre-mi" onClick={() => setOpen(false)}>Sobre mí</Link>
+
+          {/* Instagram mobile */}
+          <a
+            href="https://www.instagram.com/aromasdemalaika/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="nav-instagram mobile"
+          >
+            <FaInstagram />
+          </a>
         </div>
       )}
     </header>

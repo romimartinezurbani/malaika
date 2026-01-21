@@ -17,21 +17,23 @@ export default function Hero() {
   useEffect(() => {
     const interval = setInterval(() => {
       setPrev(current);
-      setCurrent((prev) => (prev + 1) % images.length);
+      setCurrent((c) => (c + 1) % images.length);
     }, 4500);
 
     return () => clearInterval(interval);
   }, [current]);
 
-
   return (
     <section className="hero">
-      <div className="hero-media-layer prev"
-     style={{ backgroundImage: `url(${images[prev]})` }} />
+      <div
+        className="hero-media-layer prev"
+        style={{ backgroundImage: `url(${images[prev]})` }}
+      />
 
-    <div className="hero-media-layer current"
-     style={{ backgroundImage: `url(${images[current]})` }} />
-
+      <div
+        className="hero-media-layer current"
+        style={{ backgroundImage: `url(${images[current]})` }}
+      />
 
       <div className="hero-overlay" />
 
@@ -50,6 +52,7 @@ export default function Hero() {
     </section>
   );
 }
+
 
 
 

@@ -7,7 +7,8 @@ import ExperienceModal from "../components/ExperienceModal";
 
 import productosBg from "../assets/imagenes/productos.png";
 
-import aromas from "../assets/productos/aromas.png";
+import aromas1 from "../assets/productos/7.png"
+import aromas from "../assets/productos/8.png";
 import difusores from "../assets/productos/difusores.png";
 import sprays from "../assets/productos/spray.png";
 import esencias from "../assets/productos/esencias.png";
@@ -38,8 +39,10 @@ export default function Productos() {
         <div className="section-inner productos-intro-inner">
 
           <div className="productos-intro-image">
+            <img src={aromas1} alt="Aromas Malaika detalle" />
             <img src={aromas} alt="Aromas Malaika" />
           </div>
+
 
           <div className="productos-intro-text">
             <p>

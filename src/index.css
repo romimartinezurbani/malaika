@@ -12,6 +12,12 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "The Youngest";
+  src: url("../src/assets/fonts/the-youngest.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 
 /* ==============================
    VARIABLES DE MARCA
@@ -34,7 +40,7 @@
   /* Tipografías */
   --font-title: "Rudge", serif;
   --font-body: "Raleway", sans-serif;
- 
+  --font-family: "The Youngest", serif;
 }
 
 /* ==============================

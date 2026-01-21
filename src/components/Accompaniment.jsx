@@ -7,7 +7,6 @@ import ExperienceModal from "./ExperienceModal";
 
 import acompanamientoBg from "../assets/imagenes/acompañamiento.png";
 
-// imágenes 1:1 (ejemplo – después sumás más)
 import a1 from "../assets/acompañamiento/1.png";
 import a2 from "../assets/acompañamiento/2.png";
 import a3 from "../assets/acompañamiento/3.png";
@@ -19,11 +18,24 @@ import a8 from "../assets/acompañamiento/8.png";
 import a9 from "../assets/acompañamiento/9.png";
 import a10 from "../assets/acompañamiento/10.png";
 
+import h1 from "../assets/habitarte/1.png";
+import h2 from "../assets/habitarte/2.png";
+import h3 from "../assets/habitarte/3.png";
+import h4 from "../assets/habitarte/4.png";
+import h5 from "../assets/habitarte/5.png";
+import h6 from "../assets/habitarte/6.png";
+import h7 from "../assets/habitarte/7.png";
+import h8 from "../assets/habitarte/8.png";
+import h9 from "../assets/habitarte/9.png";
+import h10 from "../assets/habitarte/10.png";
+
 
 const acompanamientoImages = [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10];
+const habitarteImages = [h1, h2, h3, h4, h5, h6, h7, h8, h9, h10];
 
 export default function Acompanamientos() {
-  const [openModal, setOpenModal] = useState(false);
+  const [activeModal, setActiveModal] = useState(null);
+
 
   return (
     <section className="acompanamientos" id="acompanamiento">
@@ -88,9 +100,13 @@ export default function Acompanamientos() {
               </ul>
             </div>
 
-            <Button variant="btn-primary" onClick={() => setOpenModal(true)}>
+            <Button
+              variant="btn-primary"
+              onClick={() => setActiveModal("acompanamiento")}
+            >
               Conocer el acompañamiento
             </Button>
+
           </div>
 
           {/* HABITARTE */}
@@ -117,20 +133,32 @@ export default function Acompanamientos() {
               </ul>
             </div>
 
-            <Button variant="btn-primary" onClick={() => setOpenModal(true)}>
+            <Button
+              variant="btn-primary"
+              onClick={() => setActiveModal("habitarte")}
+            >
               Conocer el programa Habitarte
             </Button>
+
             </div>
         </div>
       </section>
 
-      {/* MODAL 1:1 */}
       <ExperienceModal
-        open={openModal}
-        onClose={() => setOpenModal(false)}
+        open={activeModal === "acompanamiento"}
+        onClose={() => setActiveModal(null)}
         title=" "
         images={acompanamientoImages}
       />
+
+      <ExperienceModal
+        open={activeModal === "habitarte"}
+        onClose={() => setActiveModal(null)}
+        title=" "
+        images={habitarteImages}
+      />
+
+
 
     </section>
   );

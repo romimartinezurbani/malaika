@@ -4,21 +4,15 @@
 
 .hero {
   position: relative;
-  min-height: calc(100vh - 80px); /* 👈 evita que lo pise el navbar */
-  margin-top: 80px;              /* 👈 baja el hero */
+  height: calc(100vh - var(--navbar-height));
+  margin-top: var(--navbar-height);
   background-color: #f5f4f2;
   overflow: hidden;
 }
 
 /* ==============================
-   CAPAS DE IMAGEN
+   IMÁGENES
 ============================== */
-
-.hero-media {
-  position: absolute;
-  inset: 0;
-  background-color: #f5f4f2;
-}
 
 .hero-media-layer {
   position: absolute;
@@ -30,22 +24,9 @@
   transition: opacity 1.2s ease-in-out;
 }
 
-.hero-media-layer.prev {
-  opacity: 1;
-}
-
+.hero-media-layer.prev,
 .hero-media-layer.current {
   opacity: 1;
-}
-
-/* Fade suave */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 /* ==============================
@@ -69,16 +50,19 @@
 .hero-content {
   position: relative;
   z-index: 3;
+
+  height: 100%;                 /* 👈 ocupa TODO el hero */
   max-width: 720px;
   margin: 0 auto;
-  padding: 6rem 2rem 4rem; 
-  min-height: 100%;
+
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: center;      /* 👈 centro vertical real */
+  align-items: center;
   text-align: center;
-}
 
+  padding: 0 2rem;
+}
 
 /* ==============================
    TEXTO
@@ -103,30 +87,15 @@
 }
 
 /* ==============================
-   BOTÓN
-============================== */
-
-.hero .btn.primary {
-  font-size: 1rem;
-  letter-spacing: 2px;
-  margin-top: 1rem;
-  border-bottom: 1px solid var(--text-main);
-  padding-bottom: 0.4rem;
-}
-
-/* ==============================
    RESPONSIVE
 ============================== */
 
 @media (max-width: 768px) {
   .hero-content {
-    padding: 5rem 1.5rem 3rem;
+    padding: 0 1.5rem;
   }
 }
 
-  .hero-content {
-    padding: 0 1.5rem;
-  }
 
 
 

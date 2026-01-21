@@ -83,4 +83,16 @@
   }
 }
 
+ .testimonios-inner {
+    gap: 6.5rem;
+  }
+
+  .testimonio {
+    gap: 1.8rem;
+  }
+
+  .testimonio-image {
+    margin-top: 1.2rem;
+  }
+
 

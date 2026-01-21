@@ -89,37 +89,34 @@
   align-items: center;
 }
 
+/* Imagen contenedor */
 .ikigai-image {
-  display: flex;
-  justify-content: flex-start;
-}
-
-/* CONTENEDOR CON FORMA ORGÁNICA */
-.ikigai-shaped {
-  max-width: 300px;
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 
-/* IMAGEN CON RECORTE IRREGULAR */
-.ikigai-shaped img {
-  width: 100%;
-  height: auto;
-  display: block;
-
-  clip-path: polygon(
-    12% 0%,
-    88% 4%,
-    100% 28%,
-    92% 78%,
-    68% 100%,
-    18% 96%,
-    0% 70%,
-    4% 22%
-  );
-
-  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.15);
+/* Marco orgánico (diferente al About) */
+.ikigai-image::before {
+  content: "";
+  position: absolute;
+  width: 440px;
+  height: 440px;
+  background-color: var(--bg-white);
+  border-radius: 55% 45% 40% 60% / 60% 40% 60% 40%;
+  z-index: 1;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.07);
 }
 
+/* Imagen */
+.ikigai-image img {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 55% 45% 40% 60% / 60% 40% 60% 40%;
+  z-index: 2;
+}
 
 /* PROFESIONAL */
 .about-professional-inner {
@@ -157,19 +154,13 @@
   line-height: 1.7;
 }
 .about-close .about-quote {
-  font-family: "Georgia", cursive;
-  font-style: italic;
-  font-size: 2.3rem;
-  line-height: 1.35;
-
-  letter-spacing: -0.02em;
-  font-weight: 400;
-
+  font-family: "The Youngest", serif;
+  font-size: 2.2rem;
+  line-height: 1.3;
   color: white;
   margin-top: 2.5rem;
-
-  opacity: 0.95;
 }
+
 
 
 
@@ -177,7 +168,8 @@
 /* RESPONSIVE */
 @media (max-width: 900px) {
   .about-inner,
-  .ikigai-inner {
+  .ikigai-inner,
+  .about-professional-inner {
     grid-template-columns: 1fr;
   }
 
@@ -191,5 +183,23 @@
     font-size: 2.2rem;
   }
 }
+
+
+  /* Imagen siempre debajo del texto */
+  .about-professional-inner .about-image {
+    order: 2;
+    justify-content: center;
+    margin-top: 3rem;
+  }
+
+  .about-professional-inner .about-text {
+    order: 1;
+  }
+
+  /* Igualamos tamaño visual de imágenes */
+  .about-image-wrapper {
+    max-width: 260px;
+  }
+
 
 
