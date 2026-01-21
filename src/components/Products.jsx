@@ -35,32 +35,32 @@ export default function Productos() {
       />
 
       {/* INTRO */}
-      <section className="section productos-intro">
-        <div className="section-inner productos-intro-inner">
+        <section className="section productos-intro">
+          <div className="section-inner productos-intro-inner">
 
-          <div className="productos-intro-image">
-            <img src={aromas1} alt="Aromas Malaika detalle" />
-            <img src={aromas} alt="Aromas Malaika" />
+            <div className="productos-intro-image">
+              <img src={aromas1} alt="Aromas Malaika detalle" />
+              <img src={aromas} alt="Aromas Malaika" />
+            </div>
+
+            <div className="productos-intro-text">
+              <p>
+                Nuestros productos están creados para acompañar procesos internos
+                y momentos de calma.
+              </p>
+              <p>
+                No son solo aromas: son invitaciones a detenerte, respirar y
+                sentir.
+              </p>
+              <p>
+                Cada fragancia está diseñada con intención, sensibilidad y
+                conexión con la naturaleza.
+              </p>
+            </div>
+
           </div>
+        </section>
 
-
-          <div className="productos-intro-text">
-            <p>
-              Nuestros productos están creados para acompañar procesos internos
-              y momentos de calma.
-            </p>
-            <p>
-              No son solo aromas: son invitaciones a detenerte, respirar y
-              sentir.
-            </p>
-            <p>
-              Cada fragancia está diseñada con intención, sensibilidad y
-              conexión con la naturaleza.
-            </p>
-          </div>
-
-        </div>
-      </section>
 
       {/* PRODUCTO 1 */}
       <section className="section producto-block">

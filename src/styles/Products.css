@@ -1,55 +1,54 @@
 /* ==============================
-   INTRO · AROMAS (DOBLE IMAGEN)
+   INTRO · AROMAS (DESNIVEL EDITORIAL)
 ============================== */
 
 .productos-intro-inner {
   display: grid;
-  grid-template-columns: 1fr 1.1fr;
-  gap: 4.5rem; /* ⬅️ un poco más de aire */
+  grid-template-columns: 1fr;
+  gap: 3.5rem;
   align-items: center;
 }
 
-/* CONTENEDOR RELATIVO */
+/* CONTENEDOR IMÁGENES */
 .productos-intro-image {
-  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.8rem;              /* ⬅️ espacio real entre imágenes */
   width: 100%;
-  max-width: 720px;   /* ⬅️ MÁS GRANDE → mejora lectura del texto */
+  max-width: 1240px;
   margin: 0 auto;
-  height: 560px;
+  align-items: start;
 }
 
-/* IMAGEN BASE (la que tiene texto importante) */
+/* IMÁGENES */
+.productos-intro-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 32px;
+  box-shadow: 0 22px 52px rgba(0, 0, 0, 0.14);
+}
+
+/* DESNIVEL SUAVE */
 .productos-intro-image img:first-child {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 92%;         /* ⬅️ gana protagonismo */
-  height: auto;
-  border-radius: 28px;
-  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.14);
-  z-index: 2;         /* ⬅️ ahora es la principal */
+  margin-top: 0;
 }
 
-/* IMAGEN SUPERPUESTA (acompaña) */
 .productos-intro-image img:last-child {
-  position: absolute;
-  bottom: -4%;
-  right: -4%;
-  width: 78%;
-  height: auto;
-  border-radius: 28px;
-  box-shadow: 0 26px 60px rgba(0, 0, 0, 0.18);
-  z-index: 1;
-
-  animation: floatSoft 9s ease-in-out infinite;
+  margin-top: 2.4rem;       /* ⬅️ desnivel elegante */
 }
 
-/* TEXTO */
+/* TEXTO DEBAJO */
+.productos-intro-text {
+  max-width: 620px;
+  margin: 0 auto;
+  text-align: center;
+}
+
 .productos-intro-text p {
   line-height: 1.75;
   margin-bottom: 1.4rem;
-  max-width: 520px;
 }
+
 
 
 /* ==============================
@@ -163,24 +162,29 @@
 ============================== */
 
 @media (max-width: 900px) {
-  .productos-intro-inner {
+   .productos-intro-image {
     grid-template-columns: 1fr;
-    gap: 3.5rem;
+    gap: 2rem;
   }
 
-  .productos-intro-image {
-    height: auto;
-    max-width: 100%;
+  .productos-intro-image img:last-child {
+    margin-top: -1.2rem; /* mantiene relación sin tapar */
+  }
+
+  .productos-intro-text {
+    padding: 0 1rem;
+  }
   }
 
   .productos-intro-image img:first-child,
   .productos-intro-image img:last-child {
-    width: 100%;
     position: relative;
+    width: 100%;
   }
 
-  .productos-intro-image img:last-child {
-    margin-top: -60px; /* ⬅️ cruce visible pero limpio */
+  .productos-intro-inner {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
   }
 
   .producto-inner {
@@ -191,6 +195,5 @@
   .producto-image {
     max-width: 340px;
   }
-}
 
 
