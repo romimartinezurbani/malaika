@@ -123,10 +123,7 @@
   }
 
   .experience-card::before {
-    top: 1.8rem;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 40px; /* más sutil en mobile */
+    display: none;
   }
 
   .experiences-hero {
