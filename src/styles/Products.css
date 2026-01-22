@@ -50,29 +50,33 @@
 }
 
 
-
 /* ==============================
-   BLOQUES PRODUCTO
+   PRODUCTOS · STACKED ALTERNADO
 ============================== */
 
-.producto-block {
-  padding: 5rem 0; /* ⬅️ un poco más de presencia */
-}
-
-.producto-inner {
-  display: grid;
-  grid-template-columns: 1fr 1.1fr;
-  gap: 4.5rem;
+.producto-inner.stacked {
+  display: flex;
+  flex-direction: row;
   align-items: center;
+  gap: 3rem;
+  width: 100%;
 }
 
-/* alternado */
-.producto-block.alt .producto-inner {
-  direction: rtl;
+/* izquierda */
+.producto-inner.stacked {
+  justify-content: flex-start;
 }
 
-.producto-block.alt .producto-text {
-  direction: ltr;
+/* derecha */
+.producto-inner.stacked.reverse {
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+}
+
+/* texto mantiene su formato */
+.producto-text.centered {
+  max-width: 560px;
+  text-align: center;
 }
 
 
@@ -156,6 +160,69 @@
   }
 }
 
+/* ==============================
+   PRODUCTOS · LAYOUT COMPACTO
+============================== */
+
+.producto-inner.stacked {
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;      /* ⬅️ reduce aire vertical */
+  align-items: center;
+}
+
+.producto-text.centered {
+  max-width: 500px;
+  text-align: center;
+}
+
+/* IMPARES → texto se acerca a la imagen */
+.producto-inner.stacked:not(.reverse) .producto-text {
+  margin-left: 2rem;
+}
+
+/* PARES → texto se acerca a la imagen */
+.producto-inner.stacked.reverse .producto-text {
+  margin-right: 2rem;
+}
+
+/* ==============================
+   PRODUCTOS · AJUSTE EDITORIAL FINAL
+============================== */
+
+/* contenedor base */
+.producto-inner.stacked {
+  display: flex;
+  flex-direction: row-reverse; /* ⬅️ impares: imagen derecha */
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.5 rem;                 /* ⬅️ imagen y texto más cerca */
+  width: 100%;
+  margin-bottom: 6rem;         /* ⬅️ aire claro entre productos */
+  position: relative;
+}
+
+/* pares */
+.producto-inner.stacked.reverse {
+  flex-direction: row;         /* ⬅️ imagen izquierda */
+}
+
+/* línea divisoria sutil */
+.producto-inner.stacked::after {
+  content: "";
+  position: absolute;
+  bottom: -3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 160px;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.06);
+}
+
+/* último producto sin línea */
+.producto-inner.stacked:last-of-type::after {
+  display: none;
+}
 
 /* ==============================
    RESPONSIVE

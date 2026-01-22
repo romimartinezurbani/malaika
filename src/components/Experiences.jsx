@@ -20,7 +20,7 @@ import aroma5 from "../assets/experiences/merienda/5.png";
 import aroma6 from "../assets/experiences/merienda/6.png";
 import aroma7 from "../assets/experiences/merienda/7.png";
 import aroma8 from "../assets/experiences/merienda/8.png";
-import heroImage from "../assets/imagenes/experiencias.png";
+import heroImage from "../assets/imagenes/portada.png";
 import SectionHero from "./SectionHero";
 
 const montanaImages = [

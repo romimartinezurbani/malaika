@@ -5,7 +5,7 @@ import SectionHero from "../components/SectionHero";
 import flor from "../assets/imagenes/Flor1.png";
 import flor2 from "../assets/imagenes/Flor2.png";
 import ikigai from "../assets/imagenes/Ikigai.png";
-import aboutBg from "../assets/imagenes/about.png";
+import aboutBg from "../assets/imagenes/portada.png";
 
 export default function About() {
   return (
@@ -86,21 +86,20 @@ export default function About() {
 
             <p>
               En ese proceso descubrí un concepto que transformó mi manera de
-              habitar la vida: el Ikigai.
-            </p>
-
-            <p>
-              Mi Ikigai —ese punto donde se encuentra lo que amo, lo que sé
-              hacer, lo que puedo ofrecer y lo que tiene sentido— está
-              profundamente ligado a acompañar personas en procesos de
-              transformación, crear experiencias con propósito y abrir
-              espacios donde lo cotidiano se vuelva ritual.
+              habitar la vida: Ikigai.
             </p>
 
             <p>
               Tanto impacto tuvo en mi vida, que decidí llevarlo en la piel:
               Ikigai hoy es parte de mi historia y de mi cuerpo.
             </p>
+
+            <p>
+               Mi ikigai está profundamente ligado a acompañar personas en procesos de transformación,
+                crear experiencias con propósito y abrir espacios donde lo cotidiano se vuelva ritual.
+            </p>
+
+            
           </div>
 
         </div>

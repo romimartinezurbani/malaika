@@ -2,7 +2,7 @@ import "../styles/Section.css";
 import "../styles/Embajadoras.css";
 import SectionHero from "../components/SectionHero";
 
-import embajadorasBg from "../assets/imagenes/embajadoras.png";
+import embajadorasBg from "../assets/imagenes/portada.png";
 import embajadoras2 from "../assets/imagenes/embajadoras2.png";
 
 export default function Embajadoras() {

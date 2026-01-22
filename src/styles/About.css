@@ -65,7 +65,7 @@
 }
 
 .about-image-wrapper {
-  max-width: 280px; /* 👈 tamaño prolijo */
+  max-width: 320px; 
 }
 
 .about-image-wrapper img {
@@ -123,7 +123,7 @@
   display: grid;
   grid-template-columns: 0.6fr 1fr;
   gap: 4rem;
-  align-items: center; /* ahora sí funciona bien */
+  align-items: center; 
 }
 
 .about-image {

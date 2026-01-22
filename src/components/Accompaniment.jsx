@@ -5,7 +5,7 @@ import Button from "./Button";
 import SectionHero from "./SectionHero";
 import ExperienceModal from "./ExperienceModal";
 
-import acompanamientoBg from "../assets/imagenes/acompañamiento.png";
+import acompanamientoBg from "../assets/imagenes/portada.png";
 
 import a1 from "../assets/acompañamiento/1.png";
 import a2 from "../assets/acompañamiento/2.png";

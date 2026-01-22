@@ -4,7 +4,7 @@
 
 .section-hero {
   width: 100%;
-  min-height: 60vh;
+  min-height: 70vh;
 
   display: flex;
   align-items: center;
@@ -12,9 +12,8 @@
 
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain; /* 👈 CLAVE */
+  background-size: cover; /* 👈 ahora sí, imagen limpia */
 
-  background-color: #f5f4f2; /* fondo cuando sobra espacio */
   padding: 6rem 2rem;
   text-align: center;
 }
@@ -24,9 +23,16 @@
 ============================== */
 
 .section-hero-title {
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
   line-height: 1.2;
   max-width: 900px;
+
+  color: #3f4f3a; /* verde Malaika */
+
+  /* fondo suave para legibilidad */
+  background: rgba(245, 244, 242, 0.75);
+  padding: 1.2rem 2.2rem;
+  border-radius: 14px;
 }
 
 /* ==============================
@@ -35,7 +41,12 @@
 
 @media (max-width: 768px) {
   .section-hero {
-    min-height: 50vh;
+    min-height: 55vh;
     padding: 5rem 1.5rem;
+  }
+
+  .section-hero-title {
+    font-size: clamp(1.8rem, 6vw, 2.4rem);
+    padding: 1rem 1.6rem;
   }
 }

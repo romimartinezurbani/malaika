@@ -5,7 +5,7 @@ import SectionHero from "../components/SectionHero";
 import Button from "../components/Button";
 import ExperienceModal from "../components/ExperienceModal";
 
-import productosBg from "../assets/imagenes/productos.png";
+import productosBg from "../assets/imagenes/portada.png";
 
 import aromas1 from "../assets/productos/7.png"
 import aromas from "../assets/productos/8.png";
@@ -63,82 +63,83 @@ export default function Productos() {
 
 
       {/* PRODUCTO 1 */}
-      <section className="section producto-block">
-        <div className="section-inner producto-inner">
+        
+          <div className="producto-inner stacked">
 
-          <div className="producto-image">
-            <img src={difusores} alt="Difusores de varillas" />
+            <div className="producto-image">
+              <img src={difusores} alt="Difusores de varillas" />
+            </div>
+
+            <div className="producto-text centered">
+              <h3>🌿 Difusores de varillas</h3>
+              <p>
+                Los difusores de varillas acompañan los espacios de manera
+                constante y delicada.
+              </p>
+              <p>
+                Su aroma se libera lentamente, creando una atmósfera de calma,
+                presencia y equilibrio.
+              </p>
+              <p>
+                Ideales para quienes buscan un perfume sutil que habite el espacio
+                sin imponerse.
+              </p>
+            </div>
+
           </div>
+        
 
-          <div className="producto-text">
-            <h3>🌿 Difusores de varillas</h3>
-            <p>
-              Los difusores de varillas acompañan los espacios de manera
-              constante y delicada.
-            </p>
-            <p>
-              Su aroma se libera lentamente, creando una atmósfera de calma,
-              presencia y equilibrio.
-            </p>
-            <p>
-              Ideales para quienes buscan un perfume sutil que habite el espacio
-              sin imponerse.
-            </p>
+        {/* PRODUCTO 2 */}
+        
+          <div className="producto-inner stacked reverse">
+
+            <div className="producto-image">
+              <img src={sprays} alt="Home Sprays" />
+            </div>
+
+            <div className="producto-text centered">
+              <h3>💧 Home sprays</h3>
+              <p>
+                El Home Spray permite perfumar el espacio de forma inmediata y
+                consciente.
+              </p>
+              <p>
+                Un gesto simple que transforma el ambiente en segundos.
+              </p>
+              <p>
+                Ideal para intencionar un espacio antes de comenzar una actividad
+                o crear un momento propio.
+              </p>
+            </div>
+
           </div>
+        
 
-        </div>
-      </section>
+        {/* PRODUCTO 3 */}
+        
+          <div className="producto-inner stacked">
 
-      {/* PRODUCTO 2 */}
-      <section className="section producto-block alt">
-        <div className="section-inner producto-inner">
+            <div className="producto-image">
+              <img src={esencias} alt="Esencias puras" />
+            </div>
 
-          <div className="producto-image">
-            <img src={sprays} alt="Home Sprays" />
+            <div className="producto-text centered">
+              <h3>🌸 Esencias puras</h3>
+              <p>
+                Las esencias puras están pensadas para rituales de presencia y
+                conexión.
+              </p>
+              <p>
+                Al calentarse suavemente, liberan su aroma de forma envolvente.
+              </p>
+              <p>
+                Ideales para meditación, escritura o descanso consciente.
+              </p>
+            </div>
+
           </div>
+       
 
-          <div className="producto-text">
-            <h3>💧 Home sprays</h3>
-            <p>
-              El Home Spray permite perfumar el espacio de forma inmediata y
-              consciente.
-            </p>
-            <p>
-              Un gesto simple que transforma el ambiente en segundos.
-            </p>
-            <p>
-              Ideal para intencionar un espacio antes de comenzar una actividad
-              o crear un momento propio.
-            </p>
-          </div>
-
-        </div>
-      </section>
-
-      {/* PRODUCTO 3 */}
-      <section className="section producto-block">
-        <div className="section-inner producto-inner">
-
-          <div className="producto-image">
-            <img src={esencias} alt="Esencias puras" />
-          </div>
-
-          <div className="producto-text">
-            <h3>🌸 Esencias puras</h3>
-            <p>
-              Las esencias puras están pensadas para rituales de presencia y
-              conexión.
-            </p>
-            <p>
-              Al calentarse suavemente, liberan su aroma de forma envolvente.
-            </p>
-            <p>
-              Ideales para meditación, escritura o descanso consciente.
-            </p>
-          </div>
-
-        </div>
-      </section>
 
       {/* CTA */}
       <section className="section productos-cta">
