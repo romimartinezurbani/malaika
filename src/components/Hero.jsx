@@ -44,7 +44,7 @@ export default function Hero() {
           Un espacio sensorial de transformación personal.
         </p>
 
-        <p className="hero-description">
+        <p className="hero-subtitle">
           Aromas, rituales, experiencias y acompañamientos para detenerte,
           sentir y habitarte con intención.
         </p>
