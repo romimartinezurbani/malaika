@@ -110,26 +110,26 @@
     transform: translateY(0);
   }
 }
+
 @media (max-width: 900px) {
   .experiences-grid {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 3.5rem;
   }
 
   .experience-card {
     text-align: center;
+    padding-top: 4.5rem; /* espacio para la línea arriba */
   }
 
   .experience-card::before {
+    top: 1.8rem;
     left: 50%;
     transform: translateX(-50%);
+    height: 40px; /* más sutil en mobile */
   }
 
   .experiences-hero {
     min-height: 70vh;
   }
 }
-
-
-
-
