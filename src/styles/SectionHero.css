@@ -12,7 +12,7 @@
 
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover; /* 👈 ahora sí, imagen limpia */
+  background-size: cover;
 
   padding: 6rem 2rem;
   text-align: center;
@@ -27,22 +27,24 @@
   line-height: 1.2;
   max-width: 900px;
 
-  color: #3f4f3a; /* verde Malaika */
+  color: #3f4f3a;
 
-  /* fondo suave para legibilidad */
   background: rgba(245, 244, 242, 0.75);
   padding: 1.2rem 2.2rem;
   border-radius: 14px;
 }
 
 /* ==============================
-   RESPONSIVE
+   RESPONSIVE MOBILE
 ============================== */
 
 @media (max-width: 768px) {
   .section-hero {
-    min-height: 55vh;
-    padding: 5rem 1.5rem;
+    min-height: 85vh; /* 👈 más alto para que no recorte */
+    padding: 4rem 1.5rem;
+
+    background-position: top center; /* 👈 muestra las flores */
+    background-size: contain; /* 👈 NO recorta */
   }
 
   .section-hero-title {
@@ -50,3 +52,4 @@
     padding: 1rem 1.6rem;
   }
 }
+
