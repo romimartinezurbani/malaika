@@ -5,7 +5,7 @@ import SectionHero from "../components/SectionHero";
 import Button from "../components/Button";
 import ExperienceModal from "../components/ExperienceModal";
 
-import productosBg from "../assets/imagenes/portada.png";
+import productosBg from "../assets/imagenes/portadamobile.png";
 
 import aromas1 from "../assets/productos/7.png"
 import aromas from "../assets/productos/8.png";

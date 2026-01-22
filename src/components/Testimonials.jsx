@@ -2,7 +2,7 @@ import "../styles/Section.css";
 import "../styles/Testimonials.css";
 import SectionHero from "../components/SectionHero";
 
-import testimoniosBg from "../assets/imagenes/portada.png";
+import testimoniosBg from "../assets/imagenes/portadamobile.png";
 import testimonio1 from "../assets/testimonios/Testimonio 1.png";
 import testimonio2 from "../assets/testimonios/Testimonio 2.png";
 import testimonio3 from "../assets/testimonios/Testimonio 3.png";

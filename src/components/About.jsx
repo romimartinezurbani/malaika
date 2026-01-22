@@ -5,7 +5,7 @@ import SectionHero from "../components/SectionHero";
 import flor from "../assets/imagenes/Flor1.png";
 import flor2 from "../assets/imagenes/Flor2.png";
 import ikigai from "../assets/imagenes/Ikigai.png";
-import aboutBg from "../assets/imagenes/portada.png";
+import aboutBg from "../assets/imagenes/portadamobile.png";
 
 export default function About() {
   return (

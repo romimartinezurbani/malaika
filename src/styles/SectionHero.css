@@ -1,5 +1,5 @@
 /* ==============================
-   SECTION HERO · BASE
+   SECTION HERO
 ============================== */
 
 .section-hero {
@@ -10,10 +10,9 @@
   align-items: center;
   justify-content: center;
 
-  background-image: var(--hero-bg);
   background-repeat: no-repeat;
-  background-size: cover;
   background-position: center;
+  background-size: cover;
 
   padding: 6rem 2rem;
   text-align: center;
@@ -26,27 +25,32 @@
 .section-hero-title {
   font-size: clamp(2.2rem, 4vw, 3.2rem);
   line-height: 1.2;
+  max-width: 900px;
 
   color: #3f4f3a;
+
   background: rgba(245, 244, 242, 0.75);
   padding: 1.2rem 2.2rem;
   border-radius: 14px;
 }
 
 /* ==============================
-   MOBILE · CAMBIO REAL DE IMAGEN
+   RESPONSIVE MOBILE
 ============================== */
 
 @media (max-width: 768px) {
   .section-hero {
-    min-height: 85vh;
+    min-height: 85vh; /* 👈 más alto para que no recorte */
+    padding: 4rem 1.5rem;
 
-    /* 👇 ahora SÍ se reemplaza */
-    --hero-bg: url("../assets/imagenes/portadamobile.png");
+    background-position: top center; /* 👈 muestra las flores */
+    background-size: contain; /* 👈 NO recorta */
+  }
 
-    background-position: center top;
+  .section-hero-title {
+    font-size: clamp(1.8rem, 6vw, 2.4rem);
+    padding: 1rem 1.6rem;
   }
 }
-
 
 
