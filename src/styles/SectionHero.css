@@ -1,5 +1,5 @@
 /* ==============================
-   SECTION HERO · BASE (DESKTOP)
+   SECTION HERO · BASE
 ============================== */
 
 .section-hero {
@@ -10,6 +10,7 @@
   align-items: center;
   justify-content: center;
 
+  background-image: var(--hero-bg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -25,34 +26,25 @@
 .section-hero-title {
   font-size: clamp(2.2rem, 4vw, 3.2rem);
   line-height: 1.2;
-  max-width: 900px;
 
   color: #3f4f3a;
-
   background: rgba(245, 244, 242, 0.75);
   padding: 1.2rem 2.2rem;
   border-radius: 14px;
 }
 
 /* ==============================
-   MOBILE · IMAGEN ALTERNATIVA
+   MOBILE · CAMBIO REAL DE IMAGEN
 ============================== */
 
 @media (max-width: 768px) {
   .section-hero {
     min-height: 85vh;
-    padding: 4rem 1.5rem;
 
-    /* 👇 imagen mobile */
-    background-image: url("../assets/imagenes/portadamobile.png") !important;
+    /* 👇 ahora SÍ se reemplaza */
+    --hero-bg: url("../assets/imagenes/portadamobile.png");
 
-    background-size: cover;
     background-position: center top;
-  }
-
-  .section-hero-title {
-    font-size: clamp(1.8rem, 6vw, 2.4rem);
-    padding: 1rem 1.4rem;
   }
 }
 
