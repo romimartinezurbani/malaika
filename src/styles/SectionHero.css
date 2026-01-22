@@ -1,5 +1,5 @@
 /* ==============================
-   SECTION HERO
+   SECTION HERO · BASE (DESKTOP)
 ============================== */
 
 .section-hero {
@@ -11,8 +11,8 @@
   justify-content: center;
 
   background-repeat: no-repeat;
-  background-position: center;
   background-size: cover;
+  background-position: center;
 
   padding: 6rem 2rem;
   text-align: center;
@@ -35,22 +35,26 @@
 }
 
 /* ==============================
-   RESPONSIVE MOBILE
+   MOBILE · IMAGEN ALTERNATIVA
 ============================== */
 
 @media (max-width: 768px) {
   .section-hero {
-    min-height: 85vh; /* 👈 más alto para que no recorte */
+    min-height: 85vh;
     padding: 4rem 1.5rem;
 
-    background-position: top center; /* 👈 muestra las flores */
-    background-size: contain; /* 👈 NO recorta */
+    /* 👇 imagen mobile */
+    background-image: url("../assets/imagenes/portadamobile.png") !important;
+
+    background-size: cover;
+    background-position: center top;
   }
 
   .section-hero-title {
     font-size: clamp(1.8rem, 6vw, 2.4rem);
-    padding: 1rem 1.6rem;
+    padding: 1rem 1.4rem;
   }
 }
+
 
 
